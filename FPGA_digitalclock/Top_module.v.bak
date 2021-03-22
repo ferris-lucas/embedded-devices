@@ -1,0 +1,21 @@
+module Top_module(
+	input clk, //fpga clock
+	input sw, //switch that enables clock
+	input btnC, // reset the clock
+	input btnU, // hour inc
+	input btnR, //min inc
+	output [6:0] seg,
+	output [3:0] an,
+	input [7:0] led //displays secs
+	);
+
+wire [3:0] s1, s2, m1, m2, h1, h2;
+reg hrup, minup;
+wire btnCclr, btnUclr, btnRclr;
+reg btnCclr_prev, btnUclr_prev, btnRclr_prev;
+
+debounce dbC(clk, btnC, btnCclr);
+
+
+
+endmodule

@@ -1,0 +1,13 @@
+module digital_clock(
+	input clk, 
+	input en, 
+	input rst, 
+	input hrup, 
+	input minup,
+	output reg [3:0] s1, 
+	output reg [3:0] s2, 
+	output reg [3:0] m1,
+	output reg [3:0] m2, 
+	output reg [3:0] h1, 
+	output reg [3:0] h2
+	);

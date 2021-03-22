@@ -1,0 +1,20 @@
+module Slow_Clock_1Hz(
+	input clk_in,
+	output clk_out
+	);
+
+reg [25:0] count = 0;
+reg aux;
+
+always @(posedge clk_in)
+begin
+		count <= count + 1;
+		if (count == 25_000_000)
+			begin
+				count <= 0;
+				aux = ~aux;
+			end
+end
+assign clk_out = aux;
+
+endmodule
