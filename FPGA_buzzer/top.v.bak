@@ -1,0 +1,16 @@
+module top(
+	input clk,
+	output reg speaker
+	);
+
+
+
+
+	
+
+always @(posedge clk)
+begin
+
+end
+
+assign speaker <= spk;
